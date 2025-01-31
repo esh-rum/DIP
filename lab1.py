@@ -165,11 +165,33 @@ def main5():
         cv.waitKey(0)
                 
         val = int(input('To continue enter 1, to end enter 0: '))
+        
+def main6():
+    #TASK 6
+    img = cv.imread('E:/6th Semester/DIP/Lab/lab1.png', 0)
+    cv.imshow('Image', img)
+    cv.waitKey(0)
     
+    rows, cols = img.shape
+    temp = int(rows/2)
+    
+    img1 = np.zeros((rows, cols), dtype=np.uint8)
+    
+    img1[0:temp, :] = img[0:temp, :]
+    
+    i = temp
+    while i >= 0:
+        img1[temp, :] = img[i, :]
+        i -= 1
+        temp += 1
+    
+    cv.imshow('Reflected Image', img1)
+    cv.waitKey(0)
+
     
 #main1()
 #main2() 
-main3()
+#main3()
 #main4()
 #main5()
-
+main6()
