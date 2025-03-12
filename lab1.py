@@ -164,7 +164,7 @@ def main5():
         cv.imshow('Image', mat2)
         cv.waitKey(0)
                 
-        val = int(input('To continue enter 1, to end enter 0: '))
+        val = int(input('To continue enter 1, to end e1nter 0: '))
         
 def main6():
     #TASK 6
@@ -189,9 +189,9 @@ def main6():
     cv.waitKey(0)
 
     
-#main1()
+main1()
 #main2() 
 #main3()
 #main4()
 #main5()
-main6()
+#main6()
